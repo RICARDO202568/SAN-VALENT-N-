@@ -1,0 +1,132 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffccd5;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Sobre cerrado */
+.envelope {
+    background: #ff4d6d;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.envelope:hover {
+    background: #e63950;
+}
+
+/* Diseño de la carta */
+.letter {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+    color: #ff4d6d;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+h3 {
+    color: #ff4d6d;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+    position: relative;
+    height: 60px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+    width: 100px;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#yesBtn:hover {
+    background-color: #e63950;
+}
+
+#noBtn {
+    background-color: #444;
+    color: white;
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Firma */
+.signature {
+    font-size: 18px;
+    color: #ff4d6d;
+    margin-top: 20px;
+}
+
+/* Corazones flotando */
+#hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    opacity: 0.8;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    from { transform: translateY(100vh) scale(1); opacity: 1; }
+    to { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
